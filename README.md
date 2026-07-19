@@ -11,7 +11,6 @@ speech balloon, IMU, battery monitor, and camera snapshots.
    Add-Ons > Get Hardware Support Packages. During its hardware setup,
    **select ESP32 boards** so the ESP32 Arduino core gets installed.
 3. Internet access for the one-time library install.
-4. (Only for `faceTracking.m`) Computer Vision Toolbox.
 
 ## Install
 
