@@ -60,12 +60,7 @@ Full API and naming notes documented in the header comment of
 
 ## Demos
 
-- `testLED.m` — body LED test
 - `testStackChan.m` — full device test (LEDs, LCD, servos, IMU, battery, avatar, camera)
-- `cameraVideo.m` — live camera view on the LCD (board-side streaming, ~20 fps)
-- `faceTracking.m` — camera face tracking with head servos + speech balloon
-- `ballTracking.m` — PID visual servoing on a colored ball, with live ROI
-  overlay on the LCD (`setAnnotation`) and control-performance plots
 
 ## Troubleshooting
 
