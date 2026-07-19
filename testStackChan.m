@@ -11,7 +11,7 @@
 
 %% Connect (reuse an existing connection if it is still alive)
 port  = '/dev/cu.usbmodem101';
-board = 'ESP32-S3-DevKitM';
+board = 'ESP32-S3-DevKitC';
 if exist('sc', 'var') && isvalid(sc)
     try
         testRead(sc);   % probe: isvalid alone misses a dropped USB port
