@@ -14,10 +14,9 @@ speech balloon, IMU, battery monitor, and camera snapshots.
 
 ## Install
 
-Copy this whole folder somewhere permanent, then in MATLAB:
+Clone the repo,and in MATLAB, execute following to setup the software
 
 ```matlab
-cd StackChan_lib
 installStackChanAddon
 ```
 
@@ -28,15 +27,25 @@ Versions are pinned to a tested combination — safe to re-run anytime.
 
 ## Connect
 
-Find your serial port (macOS: `/dev/cu.usbmodem…`, Windows: `COM…`), then:
+First, use serialportlist function from MATLAB to list the serial ports connected to your PC/Mac.
+```
+>serialportlist
+```
 
-```matlab
-a  = arduino('/dev/cu.usbmodem101', 'ESP32-S3-DevKitC', ...
+Identify the serial port number of your StackChan to match your environment
+For Mac, it should be something like '/dev/cu.usbmodem101' or something else.
+For Windows, it should be something like 'COM3' (Number may vary)
+```
+serialPort = 'COM3'; 
+a  = arduino(serialPort, 'ESP32-S3-DevKitC', ...
              'Libraries', 'StackChanFolder/StackChan');
 sc = addon(a, 'StackChanFolder/StackChan');
 ```
 
+
 The first connection compiles and flashes the firmware — expect a few minutes.
+you can try following command to control StackChan. 
+Try testStackChan.m for more examples.
 
 ```matlab
 showRgbColor(sc, 255, 0, 0);     % body LEDs red (BSP-style names)
